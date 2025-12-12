@@ -1,26 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Exo+2:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle , rgba(0,0,0,1) 0%, rgb(34, 1, 44) 100%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header .navbarre {
+    background-color: black;
+    color: rgb(243, 245, 247);
+    font-family: 'exo 2';
+    font-size: 2vw;
+    box-shadow:
+        0 0 0 2px white,
+        0.3em 0.3em 1em rgba(248, 244, 244, 0.6);
+ ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+}}
+
+main {
+    position: relative;
+    margin-top: 20PX;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+
+    padding-top:  120px;
+
+    .titre{
+        position: absolute;
+        top: 20px;
+        color: aliceblue;
+        font-size: 50px;
+        font-family:'exo 2'
+    }
+
+    .presentation {
+    width: 800px;
+    height: min-content;
+    color: aliceblue;
+    background:
+    radial-gradient(circle at 50% 20%, #2b0040 0%, #0d0017 40%, #000000 100%),
+    url("https://www.transparenttextures.com/patterns/stardust.png");
+background-blend-mode: screen;
+    box-shadow:
+        0 0 0 2px white,
+        0.3em 0.3em 1em rgba(248, 244, 244, 0.6);
+        gap: 20px;
+        padding: 10px;
+}
 }
